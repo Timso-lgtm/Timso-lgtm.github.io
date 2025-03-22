@@ -15,6 +15,7 @@ body {
     line-height: 1.6;
     background-color: var(--background-color);
     color: var(--text-color);
+    
 }
 
 .mitte {
@@ -148,20 +149,20 @@ footer {
     }
 
 
-/* Quiz */ 
+/* Quiz */
 
 .quiz-container {
     display: flex;
     flex-direction: column;
-    width: 30rem;
-    max-width: 80%;
-    background-color: white;
+    max-width: 100%;
+    background-color: rgb(253, 253, 253);
     border-radius: 0.5rem;
     box-shadow: 0 0 0.6rem 0.1rem rgba(0, 0, 0, 0.1);
   }
   
   #question-container {
     flex-direction: column;
+    
     gap: 2rem;
     padding: 2rem;
   }
@@ -192,7 +193,7 @@ footer {
   
   .btn {
     padding: 1.5rem;
-    background-color: #70b5ff;
+    background-color: #4b573e;
     color: white;
     border: none;
     border-radius: 0 0 0.5rem 0.5rem;
@@ -220,3 +221,23 @@ footer {
     font-size: 1.5rem;
     font-weight: bold;
   }
+
+  /* Quiz Verlinkung */
+
+  h1 {
+    color: #ffffff;
+    text-align: center;
+}
+.quiz-link {
+    display: block; /* Block-Element für Links */
+    margin: 10px 0; /* Abstand zwischen Links */
+    padding: 10px;
+    background-color: #4b573e; /* Hintergrundfarbe */
+    color: white; /* Textfarbe */
+    text-decoration: none; /* Unterstreichung entfernen */
+    border-radius: 5px; /* Abgerundete Ecken */
+    transition: background-color 0.3s; /* Übergangseffekt */
+}
+.quiz-link:hover {
+    background-color: #1e361f; /* Hintergrundfarbe beim Hover */
+}
