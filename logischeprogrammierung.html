@@ -17,6 +17,7 @@
                     <li><a href="index.html">Startseite</a></li>
                     <li><a href="algorithmen.html">Algorithmen</a></li>
                     <li><a href="datenbanken.html">Datenbanken</a></li>
+                    <li><a href="logischeprogrammierung.html">Prolog</a> </li>
                     <li><a href="rechnernetzwerke.html">Rechnernetzwerke </a></li>
                     <li><a href="quiz.html">Quiz</a></li>
                     
@@ -26,117 +27,115 @@
     </header>
 
     <main class="container">
-        <!-- Startseite -->
+        <!-- Inhalt-->
         <section id="home" class="card">
             <h2>Willkommen!</h2>
             <p>Hier findest du Lernmaterialien rund um das Thema Logische Programmierung.</p>
         </section>
     
-    <section id="inhalt14" class="card">
-        <h1>Prolog</h1>
-
-        <section>
-            <h2>1. Grundlagen</h2>
+    
+        
+        <section id="inhalt15" class="card">
+            <h2>Grundlagen</h2>
             <ul>
-                <li><strong>Fakten (Tatsachen):</strong> Daten der Datenbank bestehen aus Prädikaten (Eigenschaft) und Konstanten. Beispiel: <code>rot(rose).</code> (Die Rose ist rot.)</li>
-                <li>Alles wird klein geschrieben, außer Variablen.</li>
+                <li>Daten der Datenbank bestehen aus Prädikaten (Eigenschaft) und Konstanten. Beispiel: <code>rot(rose).</code> (Die Rose ist rot.)</li>
+                <li>Alles wird klein geschrieben, außer Variablen</li>
                 <li>Prolog meldet Bereitschaft mit dem Promptzeichen „<code>?-</code>“.</li>
-                <li>Eingabe liefert eine Abfrage/Aufforderung an die Datenbasis (Gesamtheit der Fakten) —> Antwort durch Prolog ist <code>yes</code> oder <code>no</code>.</li>
-                <li>Variablen dienen als Platzhalter für Konstanten.</li>
-                <li>Fakten können kombiniert werden: <code>,</code> für UND und <code>;</code> für ODER. Erst beim <code>.</code> ist der Fakt zu Ende.</li>
-                <li>Fakten werden nach Prädikat sortiert.</li>
+                <li>Eingabe liefert eine Abfrage/Aufforderung an die Datenbasis (Gesamtheit der Fakten) —> Antwort durch Prolog ist yes oder no</li>
+                <li>Variablen dienen als Platzhalter für Konstanten</li>
+                <li>Fakten können kombiniert werden: <strong>,</strong> für UND und <strong>;</strong> für ODER. Erst beim <strong>.</strong> ist der Fakt zu Ende</li>
+                <li>Fakten werden nach Prädikat sortiert</li>
                 <li>Symmetrische Fakten werden aufgeteilt: Beispiel: <code>verheiratet(mann, frau).</code> und <code>verheiratet(frau, mann).</code></li>
-                <li>Kommentare einfügen, spätestens bei mehr als 2 Konstanten. Kommentarzeichen: <code>/*</code> (Beginn) und <code>*/</code> (Ende).</li>
-                <li>Symbol für Ungleichheit: <code>/=</code>.</li>
+                <li>Kommentare einfügen, spätestens bei mehr als 2 Konstanten. 
+                <li>Kommentarzeichen: <strong>/*</strong> (Beginn) und <strong>*/</strong> (Ende).</li>
+                <li>Symbol für Ungleichheit: <strong>/=</strong>.</li>
             </ul>
         </section>
     
-        <section>
-            <h2>2. Regeln</h2>
+        <section id="inhalt16" class="card">
+            <h2> Regeln</h2>
             <ul>
-                <li>Regeln vereinfachen die Datenbasis durch allgemeine Formulierungen —> Datenbasis bleibt kurz.</li>
-                <li>Kopf der Regel: <code>:-</code> Rumpf der Regel.</li>
-                <li>Klauseln sind Regeln.</li>
+                <li>Regeln vereinfachen die Datenbasis durch allgemeine Formulierungen —> Datenbasis bleibt kurz</li>
+                <li>Kopf der Regel: <code>:-</code> Rumpf der Regel</li>
+                <li>Klauseln sind Regeln</li>
                 <li>Prolog-Programm = Gesamtheit aller Klauseln.</li>
                 <li>Beispiel: <code>satz(X, Y, Z) :- artikel(X), nomen(Y), verb(Z).</code></li>
-                <li>Überprüfen: Prolog prüft, ob Fakten mit Konstanten vorhanden sind —> <code>yes</code> oder <code>no</code>.</li>
-                <li>Erzeugen: Prolog versucht, Variablen sinnvoll zu belegen und gibt die möglichen Bedingungen zurück.</li>
+                <li>Überprüfen: Prolog prüft, ob Fakten mit Konstanten vorhanden sind —> yes oder no</li>
+                <li>Erzeugen: Prolog versucht, Variablen sinnvoll zu belegen und gibt die möglichen Bedingungen zurück</li>
             </ul>
         </section>
 
-        <h1>Prolog - Arbeitsweise</h1>
+        
 
-        <section>
-            <h2>3. Arbeitsweise</h2>
+        <section id="inhalt17" class="card">
+            <h2> Arbeitsweise</h2>
             <ul>
-                <li>Prolog arbeitet der Reihe nach von vorn nach hinten.</li>
-                <li><strong>Match:</strong> Übereinstimmung von Abfrage mit Fakt bzw. Konstanten wird gesucht.</li>
-                <li>Für eine Variable ist jede Konstante ein Match.</li>
+                <li>Prolog arbeitet der Reihe nach von vorn nach hinten</li>
+                <li>Match: Übereinstimmung von Abfrage mit Fakt bzw. Konstanten wird gesucht</li>
+                <li>Für eine Variable ist jede Konstante ein Match</li>
                 <li>Zerlegung der Abfrage in Teilschritte zu einzelnen Fakten.</li>
-                <li>Beispiel: <code>?- eltern(daisy, X), maennl(X).</code> —> beide Abfragen beschreiben den gleichen Sachverhalt (declarativ) -> Finde Papa von Daisy.</li>
+                <li>Beispiel: <code>?- eltern(daisy, X), maennl(X).</code> —> beide Abfragen beschreiben den gleichen Sachverhalt (declarativ) -> Finde Papa von Daisy</li>
                 <li>Arbeitsweise bei beiden unterschiedlich (prozentual):
                     <ol>
                         <li>Finde Elternteil, prüfe, ob männlich.</li>
                         <li>Finde alle Männer, prüfe, wer Papa ist.</li>
                     </ol>
                 </li>
-                <li>Logdaten werden mittels <code>write</code> erfasst und mittels <code>write(Variable)</code> auch ausgegeben. Zeilenumbruch mit <code>nl</code> verbessert die Lesbarkeit.</li>
-                <li>Ist ein Teilschritt mit vergangener Belegung nicht zu erfüllen, so wird nach weiteren Bedingungen des letzten Teilschritts gesucht (Backtracking) —> Entscheidungsbaum.</li>
+                <li>Logdaten werden mittels <code>write</code> erfasst und mittels <code>write(Variable)</code> auch ausgegeben. Zeilenumbruch mit <code>nl</code> verbessert die Lesbarkeit</li>
+                <li>Ist ein Teilschritt mit vergangener Belegung nicht zu erfüllen, so wird nach weiteren Bedingungen des letzten Teilschritts gesucht (Backtracking) </li>
             </ul>
         </section>
-    </section>
+   
     
-    <section id="inhalt15" class="card">
-        <h1>Prolog - Rekursion, Listen, Arithmetik und Not</h1>
-
-    <section>
-        <h2>4. Rekursion</h2>
+    <section id="inhalt18" class="card">
+        
+        <h2> Rekursion</h2>
         <ul>
             <li>Man benötigt eine Abbruchbedingung.</li>
             <li>Im Alltag verdeutlicht durch: „Es geht immer so weiter“.</li>
-            <li>Beispiel: <code>weisungsbefugt(X, Y) :- weisungsbefugt(X, Z), weisungsbefugt(Z, Y).</code> —> führt zu Endlos.</li>
+            <li>Beispiel: <code>weisungsbefugt(X, Y) :- weisungsbefugt(X, Z), weisungsbefugt(Z, Y).</code> —> führt zu Endlos</li>
         </ul>
     </section>
 
-    <section>
-        <h2>5. Listen</h2>
+    <section id="inhalt19" class="card">
+        <h2> Listen</h2>
         <ul>
             <li>Listen stehen in eckigen Klammern.</li>
             <li>Listenvariable endet mit „s“.</li>
-            <li>Syntax: <code>[Kopf | Schwanz]</code>.</li>
-            <li>Beispiel: <code>?- [Kopf | Schwanz] = [a, b, c, d, e].</code> —> <code>K = a</code>, <code>Schwanz = [b, c, d, e]</code>.</li>
+            <li>Syntax: <code>[Kopf | Schwanz]</code></li>
+            <li>Beispiel: <code>?- [Kopf | Schwanz] = [a, b, c, d, e].</code> —> <code>K = a</code>, <code>Schwanz = [b, c, d, e]</code></li>
         </ul>
     </section>
 
-    <section>
-        <h2>6. Arithmetik</h2>
+    <section id="inhalt20" class="card"> 
+        <h2> Arithmetik</h2>
         <ul>
             <li>Kleiner gleich einer: <code>=<</code>.</li>
-            <li>Arithmetische Operationen können nicht erzeugt werden, sondern nur verglichen (Match).</li>
-            <li>Gleichheitszeichen testet nur auf tatsächliche Gleichheit. Beispiel: <code>5 = 2 + 3</code> —> <code>no</code>.</li>
+            <li>Arithmetische Operationen können nicht erzeugt werden, sondern nur verglichen (Match)</li>
+            <li>Gleichheitszeichen testet nur auf tatsächliche Gleichheit. Beispiel: <code>5 = 2 + 3</code> —> <code>no</code></li>
             <li>Häufig dreistellige Prädikate, z.B. <code>plus(S1, S2, Summe).</code></li>
         </ul>
     </section>
 </section>
 <section id="inhalt16" class="card">
-    <h1>Prolog - Not und Cut</h1>
+    
 
     <section>
-        <h2>1. Not</h2>
+        <h2> Not</h2>
         <ul>
-            <li>Das Schlüsselwort <code>not</code> wird verwendet, um auszudrücken, dass eine Aussage nicht wahr ist.</li>
+            <li>Das Schlüsselwort not wird verwendet, um auszudrücken, dass eine Aussage nicht wahr ist</li>
             <li>Es prüft, ob ein bestimmter Ausdruck scheitert. Beispiel: Du fragst: „Ist die Aussage falsch?“</li>
-            <li>Prolog schaut nach, ob die Aussage nicht bewiesen werden kann. Wenn ja, dann gibt <code>not</code> „wahr“ zurück.</li>
+            <li>Prolog schaut nach, ob die Aussage nicht bewiesen werden kann. Wenn ja, dann gibt not „wahr“ zurück</li>
         </ul>
     </section>
 
     <section>
-        <h2>2. Cut</h2>
+        <h2> Cut</h2>
         <ul>
-            <li>Das Symbol <code>!</code> (Cut) wird verwendet, um die Suche in Prolog zu begrenzen.</li>
+            <li>Das Symbol "!" (Cut) wird verwendet, um die Suche in Prolog zu begrenzen</li>
             <li>Es sagt Prolog: „Geh hier nicht weiter, du brauchst keine anderen Möglichkeiten mehr prüfen!“</li>
-            <li>Es hilft, effizienter zu arbeiten, weil es unnötige Berechnungen stoppt.</li>
-            <li>Es kann jedoch auch logische Konsequenzen beeinflussen und zu unerwarteten Ergebnissen führen, wenn es falsch benutzt wird.</li>
+            <li>Es hilft, effizienter zu arbeiten, weil es unnötige Berechnungen stoppt</li>
+            <li>Es kann jedoch auch logische Konsequenzen beeinflussen und zu unerwarteten Ergebnissen führen, wenn es falsch benutzt wird</li>
         </ul>
     </section>
 </section>
