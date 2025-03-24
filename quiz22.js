@@ -10,94 +10,94 @@ let shuffledQuestions, currentQuestionIndex, score;
 
 const questions = [
   {
-    question: "Was sind Daten?",
+    question: "Welche Architektur ermöglicht paralleles Arbeiten mittels Threads",
     answers: [
-      { text: "Physische Gegenstände", correct: false },
-      { text: "Elektronisch gespeicherte Informationen", correct: true},
-      { text: "Unstrukturierte Texte", correct: false },
+      { text: "Von-Neumann-Architektur", correct: false },
+      { text: "Havard-Architektur", correct: false },
+      { text: "Datenfluss-Architektur", correct: true},
       
     ],
   },{
-    question: "Was versteht man unter einer Datenbasis (DB)?",
+    question: "Welche Architektur kombiniert Speicher und BUS? ",
     answers: [
-      { text: "Eine Programmiersprache", correct: false },
-      { text: "Die Gesamtheit der Daten mit Struktur und Beziehungen", correct: true },
-      { text: " Ein Datenverarbeitungssystem", correct: false },
+      { text: "Von-Neumann-Architektur", correct: true },
+      { text: "Datenfluss-Architektur", correct: false },
+      { text: "Havard-Architektur ", correct: false },
       
     ],
   },{
-    question: "Woraus besteht ein Datenbanksystem?",
+    question: "Wie überträgt ein Touchpad Bewegungen an das Betriebssystem?",
     answers: [
-      { text: "Datenbasis und Datenbankmanagement", correct: true },
-      { text: "Nur aus Tabellen", correct: false },
-      { text: "Aus Dateien ohne Struktur ", correct: false },
+      { text: "Über Lichtimpulse", correct: false },
+      { text: "Über Signalmessung durch den Controller", correct: true },
+      { text: "Über elektrostatische Sensoren", correct: false },
       
     ],
   },{
-    question: "Welcher Vorteil gehört NICHT zu Datenbanken?",
+    question: "Wie funktioniert die Bilddarstellung bei LCD-Monitoren?",
     answers: [
-      { text: "Dynamisches Wachstum der Zeilenanzahl", correct: false },
-      { text: "Zugriffskontrolle durch Login", correct: false },
-      { text: "Eingeschränkte Anzahl an Datensätzen", correct: true },
+      { text: "Durch magnetische Felder", correct: false },
+      { text: "Durch Laserstrahlen", correct: false },
+      { text: "Durch elektrische Impulse mit Farbfiltern", correct: true },
       
     ],
   },{
-    question: "Was ist ein Primärschlüssel? ",
+    question: "Wie werden Daten bei optischen Speichern gespeichert?",
     answers: [
-      { text: "Eine zufällige Zahl", correct: false },
-      { text: "Ein eindeutiger Identifier ohne Duplikate", correct: true },
-      { text: "Ein frei definierbares Textfeld ", correct: false },
+      { text: "Durch magnetische Felder", correct: false },
+      { text: "Durch Laser, der 0 und 1 abtastet", correct: true },
+      { text: "Durch elektrische Ladung", correct: false },
     ],
   },{
-    question: "Welche Beziehung beschreibt jede Mutter kann mehrere Kinder haben?",
+    question: "Welche Topologie verbindet alle Hosts über eine einzige Leitung? ",
     answers: [
-      { text: "1:1 ", correct: false },
-      { text: "1:n", correct: true },
-      { text: "n:m", correct: false },
+      { text: "BUS", correct: true },
+      { text: "Ring", correct: false },
+      { text: "Stern ", correct: false },
     ],
   },{
-    question: "Welcher Felddatentyp gehört zu Access?",
+    question: "Welche Topologie beschreibt alle Netzwerkknoten sind irgendwie miteinander verbunden? ",
     answers: [
-      { text: "Autowert", correct: true },
-      { text: " Bilder ", correct: false },
-      { text: " Audio ", correct: false },
+      { text: "Stern", correct: false },
+      { text: "BUS", correct: false },
+      { text: "Vermaschte Topologie", correct: true },
      
     ],
   },{
-    question: "Welches Eingabeformat kann für ein Datum genutzt werden? ",
+    question: "Welche Adressierungsmethode basiert auf der Netzwerkkarte?",
     answers: [
-      { text: "MM-DD-JJJJ ", correct: false },
-      { text: "TT.MM.JJJJ", correct: true },
-      { text: "JJJJ/MM/TT ", correct: false },
+      { text: "IPv6", correct: false },
+      { text: "MAC-Adressen", correct: true },
+      { text: "CIDR", correct: false },
     ],
   },{
-    question: "Welche Frage ist KEIN Teil der Bedarfsanalyse?",
+    question: "Wofür steht die Zahl /24 in der CIDR-Notation?",
     answers: [
-      { text: "Wer benutzt die Datenbank?", correct: false },
-      { text: "Welche Daten müssen erfasst werden?", correct: false },
-      { text: "Welche Daten müssen erfasst werden?", correct: true },
+      { text: "Anzahl der Hosts im Subnetz", correct: false },
+      { text: "Subnetzmaske", correct: true },
+      { text: "Übertragungsgeschwindigkeit", correct: false },
     ],
   },{
-    question: "Wie wird eine Beziehung zwischen zwei Tabellen hergestellt? ",
+    question: "Welche Schicht des OSI-Modells ist für die Datenumwandlung verantwortlich?",
     answers: [
-      { text: "Durch Hinzufügen von Tabellen ohne Schlüssel", correct: false },
-      { text: "Durch Fremdschlüssel und Verknüpfungstabellen", correct: true },
-      { text: "Nur durch Kopieren der Daten ", correct: false },
+      { text: "Transportschicht", correct: false },
+      { text: "Sitzungsschicht", correct: false },
+      { text: "Darstellungsschicht", correct: true },
     ],
   },{
-    question: "Was ist ein Datenfeld? ",
+    question: "Welcher Nutzen ergibt sich aus der Verbindung von Endgeräten in einem Rechnernetz?",
     answers: [
-      { text: "Ein einzelnes Feld in einer Datenbankzelle", correct: true },
-      { text: "Eine komplette Tabelle ", correct: false },
-      { text: "Der Titel einer Spalte ", correct: false },
+      { text: "Bessere Stromversorgung", correct: false },
+      { text: "Schnellere Taktung der CPUs ", correct: false },
+      { text: "Gemeinsames Nutzen von Peripheriegeräten", correct: true },
       
     ],
   },{
-    question: "Welche Methode wird bei der Datenanalyse verwendet, um Entitäten zu identifizieren? ",
+    question: "Welche Schicht des OSI-Modells stellt die physische Übertragung roher Datenbits sicher?",
     answers: [
-      { text: "Zufallsanalyse", correct: false },
-      { text: " Nominalextraktion", correct: true },
-      { text: "Tabellenkopie ", correct: false },
+      { text: "Bitübertragungsschicht", correct: true },
+      { text: "Sicherungsschicht", correct: false },
+      { text: "Anwendungsschicht", correct: false },
     ],
   },
 ];

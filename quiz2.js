@@ -1,4 +1,4 @@
-const questionContainer = document.getElementById("question-container1");
+const questionContainer = document.getElementById("question-container");
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
@@ -17,8 +17,7 @@ const questions = [
           { text: "Datenfluss-Architektur", correct: true },
           
         ],
-      },
-      {
+      },{
         question: "Welche Architektur kombiniert Speicher und BUS? ",
         answers: [
           { text: "Von-Neumann-Architektur", correct: true },
@@ -26,8 +25,7 @@ const questions = [
           { text: "Havard-Architektur", correct: false },
           
         ],
-      },
-      {
+      },{
         question: "Wie überträgt ein Touchpad Bewegungen an das Betriebssystem?",
         answers: [
           { text: "Über Lichtimpulse ", correct: false },
@@ -35,8 +33,7 @@ const questions = [
           { text: "Über elektrostatische Sensoren ", correct: false },
 
         ],
-      },
-      {
+      },{
         question: "Wie funktioniert die Bilddarstellung bei LCD-Monitoren?",
         answers: [
           { text: "Durch magnetische Felder ", correct: false },
@@ -44,8 +41,7 @@ const questions = [
           { text: "Durch elektrische Impulse mit Farbfiltern", correct: true },
           
         ],
-      },
-      {
+      },{
         question: "Wie werden Daten bei optischen Speichern gespeichert? ",
         answers: [
           { text: "Durch magnetische Felder ", correct: false },
@@ -73,8 +69,7 @@ const questions = [
           { text: "MAC-Adressen", correct: true },
           { text: " CIDR ", correct: false },
         ],
-      },
-      {
+      },{
         question: "Wofür steht die Zahl /24 in der CIDR-Notation?",
         answers: [
           { text: "Anzahl der Hosts im Subnetz", correct: false },
@@ -104,7 +99,7 @@ const questions = [
           { text: "Anwendungsschicht ", correct: false },
         ],
      },
-  ];
+];
 
 startQuiz();
 
@@ -122,7 +117,7 @@ function startQuiz() {
 function setNextQuestion() {
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
-  }
+}
   
 function showQuestion(question) {
     questionElement.innerText = question.question;
@@ -144,15 +139,15 @@ function showQuestion(question) {
       inputGroup.appendChild(label);
       answerButtons.appendChild(inputGroup);
     });
-  }
+}
 
-  function resetState() {
+function resetState() {
     while (answerButtons.firstChild) {
       answerButtons.removeChild(answerButtons.firstChild);
     }
-  }
+}
 
-  nextButton.addEventListener("click", () => {
+nextButton.addEventListener("click", () => {
     const answerIndex = Array.from(
       answerButtons.querySelectorAll("input")
     ).findIndex((radio) => radio.checked);
@@ -169,7 +164,7 @@ function showQuestion(question) {
     } else {
       alert("Please select an answer.");
     }
-  });
+});
 
 restartButton.addEventListener("click", startQuiz);
 
