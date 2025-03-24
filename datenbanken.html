@@ -36,17 +36,147 @@
             
         </section>
 
-        <!-- Quiz -->
-        <section id="Quiz" class="card"> 
-            <h2>Quiz</h2>
-            <div class="quiz-container">
-                <div id="quiz"></div>
-                <button id="submit">Quiz beenden</button>
-                <div id="results"></div>
-            </div>
-            <script src="datenbanken.js"></script>
+        <section id="fachbegriffe" class="card">
+            <h2> Fachbegriffe</h2>
+             <ul> 
+                 <li> Daten
+                  <ul>
+                     <li>digitale gespeicherte Informationen, die automatisch und elektr. verarbeitet werden</li>
+                     <li>werden durch den Nutzer „interpretiert“</li>
+                     <li>alle Daten sind Zeichenketten, die nach festgelegten Regeln aufgebaut sind</li>
+                   </ul>
+                 </li>
+             </ul>
+            <p>
+            <li> Datenbasis(DB)
+              <p> Ist die Gesamtheit der Daten mit Struktur inklusive ihrer Beziehungen zueinander</p>
+            </p>
+            </li>
+            <li>Datenbankmanagementsystem(DBMS)
+              <p>Ist die Oberfläche zur Eingabe und Verwaltung</p>
+            </li>
+            <li> Datenbanksystem
+              <p> Ist die Einheit aus Datenbasis und Datenbankmanagement</p>
+            </li>
+           <section id="inhalt1" class="card">
+            <li> Warum sollte man Datenbanken benutzen?
+              <ul>
+                  <li>über den Login kann man Zugriffsrechte regeln</li>
+                  <li>Speicherplatz</li>
+                  <li>Beliebig viele Zeilen (wächst dynamisch)</li>
+                  <li>Automatisches Aktualisieren von Dateneinträgen</li>
+              </ul>
+            </li>
+           </section> 
+           <section id="inhalt2" class="card">
+            <p>
+              <li> Von der Idee zur Datenbank
+                <ul>
+                 <li>Spalten sollen anders organisiert werden z.B. Vor-/Nachname</li>
+                 <li>Einträge sollen ergänzt werden z.B. Vorwahl/Telefon</li>
+                 <li>Angabe der Datenallgemeingültig formatieren z.B. Alter -> Geburtsdatum</li>
+               </ul>
+             </li>
+            </p>  
+          </ul>
         </section>
-
+        <section id="inhalt2" class="card">
+          <h3> Einführung in MC-Acces</h3>
+           <ul>
+             <p>
+              <li>Felddatentypen: kurzer/langer Text, Datum/Uhrzeit, Link, Autowert, … </li>
+              <li>Acces bietet:
+                <ul>
+                  <li>Tabellen (Gesamtheit ->Tabellenschema)</li>
+                  <li>Beziehungen (zwischen Tabellen)</li>
+                  <li>Abfragen (zum Auswerten)</li>
+                  <li>Formulare (zum Eingeben)</li>
+                </ul>
+              </li>
+              <li>Tabellenaufbau
+                <ul>
+                  <li>Primärschlüssel (Autowert, Zahl, ohne Duplikate) -> minimal, eindeutig</li>
+                  <li>Merkmale (Spaltenüberschriften)</li>
+                  <li>Datensatz (Zeilen der Tabelle)</li>
+                  <li>Datenfeld (einzelne Zelle)</li>
+                  <li>Datenfeldwert (Inhalt einer Zelle)</li>
+                  <li>Tabellennamen</li>
+                </ul>
+              </li>
+              <li>Felddatentypen
+                <ul>
+                  <li>Vorschlag von Access betrachten (Integer, Text, Datum, Ja/Nein, …)</li>
+                  <li>Nachschlage-Assistenten (Auswahlfelder, …)</li>
+                  <li>Indiziert (als Schlüssel)</li>
+                  <li>Gültigkeitsregeln (Eingabe wird eingeschränkt)</li>
+                  <li>Eingabeformat (Datum: TT.MM.JJJJ)</li>
+                </ul>
+              </li>
+              <li>Beziehungen: verknüpfen der Tabellen miteinander
+                <ul>
+                  <li>1:1 -> Jedem Datensatz einer Tabelle wird genau ein Datensatz einer anderen Tabelle zugeordnet und umgekehrt</li>
+                  <li>1: n -> Jedem Datensatz einer Tabelle wird genau ein Datensatz einer anderen Tabelle zugeordnet; umgekehrt kann ein Datensatz aber beliebig vielen Datensätzen der anderen Tabelle zugeordnet sein.</li>
+                  <li>n:m -> Jedem Datensatz einer Tabelle werden beliebig viele Datensätze einer anderen Tabelle zugeordnet; umgekehrt werden einem Datensatz ebenfalls beliebig viele Datensätze der anderen Tabelle zugeordnet.</li>
+                </ul>
+              </li>
+              <li>Beziehungen
+                <ol>
+                  <li>Beziehung</li>
+                  <ul>
+                    <li>Direkte Ergänzung in der Ausgangstabelle</li>
+                    <li>Hinzufügen von Tabellen</li>
+                    <li>Schlüssel festlegen</li>
+                    <li>Dies kannn zu einer Situation führen, in der zwei Namen existieren, dass beheben wir, in dem wir das in eine neue Tabelle auslagern </li>
+                  </ul>
+                  <li>Beziehung</li>
+                   <ul>
+                     <li>2 Tabellen werden direkt miteinander verknüpft</li>
+                     <li>Neue Tabelle wird mit einem Fremdschlüssel, mit der anderen Tabelle verknüpft</li>
+                     <li>Die entstandene Beziehung als Verknüpfungstabelle auslagern</li>
+                   </ul>
+                   <li>Beziehung</li>
+                    <ul>
+                      <li>Merkmal	hinzufügen</li>
+                      <li>Zuordnung	über Verknüpfungstabelle</li>
+                    </ul>
+                </ol>
+              </li>
+            </section>
+            <section id="inhalt3" class="card">
+              <li>Datenanalyse
+                <ol>
+                  <li>Bedarf betrachten:</li>
+                  <ul>
+                    <li>Wofür wird die Datenbank benötigt?</li>
+                    <li>Was soll die Datenbank leisten? </li>
+                    <li>Welche Daten sollen erfasst werden?</li>
+                    <li>Was soll hinterher als Prozess stattfinden?</li>
+                    <li>Wer	benutzt das?</li>
+                  </ul>
+                  <li>Woher	kommen meine Infos</li>
+                    <ul>
+                      <li>Alle Formulare, die bisher die Aufgabe übernommen haben, als Vorlage	nutzen</li>
+                      <li>Interview</li>
+                      <li>Fragenkatalog</li>
+                      <li>Alte	Datenbasis nutzen</li>
+                    </ul>
+                    <li>Analyse	der Daten</li>
+                      <ol>
+                        <li>Entitäten(Menge gleichartiger Objekte)</li>
+                        <li>Beziehungen	(Verhältnis der Entitäten zueinander)</li>
+                        <li>Beziehungsmerkmale	(Eigenschaften von Entitäten)</li>
+                        <li>Nominalextraktion (Methode um 1 - 4 zu bearbeiten)</li>
+                          <ul>
+                            <li>Anforderungsliste liegt vor und wird bearbeitet</li>
+                            <li>Suchen aller Hauptwörter/ Nomen</li>
+                            <li>ermittle daraus die Beziehungsarten</li>
+                          </ul>
+                      </ol>
+                </ol>
+              </li>
+              </p>
+            </ul>
+        </section>
         
     </main>
 

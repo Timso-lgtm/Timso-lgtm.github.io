@@ -4,6 +4,7 @@ const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 const restartButton = document.getElementById("restart-btn");
 const resultDiv = document.getElementById("result");
+const zurückButton = document.getElementById("zurück-btn")
 
 let shuffledQuestions, currentQuestionIndex, score;
 
@@ -121,3 +122,6 @@ function endQuiz() {
   resultDiv.innerText = `Your final score: ${score} / ${shuffledQuestions.length}`;
 }
 
+document.getElementById('backButton').addEventListener('click', function() {
+  window.history.back();
+});

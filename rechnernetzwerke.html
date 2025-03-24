@@ -36,18 +36,219 @@
             
         </section>
 
-        <!-- Quiz -->
-        <section id="programmierung" class="card">
-            <h2>Quiz</h2>
-            <div class="quiz-container">
-                <div id="quiz"></div>
-                
-                <div id="results"></div>
-            </div>
-            <script src="script.js"></script>
+        <section id="inhalt5" class="card">
+            <h3> Rechnerarchitektur und Rechnernetze</h3>
+            <ul>
+                <li>1-Bit Archikektur (Turingmaschiene)</li>
+                <li>4-Bit Architektur (Waschmaschine)</li>
+                <li>16-Bit Architektur (Heimcomputer)</li>
+                <li>32-Bit Architektur (Grafik)</li>
+                <li>64-Bit Architektur (PowerPC)</li>
+            </ul>
         </section>
 
+        <section id="inhalt6" class="card">
+            <h3> Aufbau </h3>
+            <ul>
+                <li>Havard - Architektur (mehrer Befehle gleichzeitig)</li>
+                <li>Datenfluss - Architektur (paralleles arbeiten mittels Threads)</li>
+                <li>Von Neumann - Architektur ( Speicher und BUS)</li>
+            </ul>
+            <p>
+                <li>BUS - stellt die Verbindung zwischen Komponenten im System her —> Austausch von Daten</li>
+            </p>
+        </section>
+
+        <section id="inhalt7" class="card">
+            <h4>Verarbeitung</h4>
+            <ul>
+                <li>Eingabegeräte <—> BUS <—>CPU <—>Bus <—>Ausgabegerät</li>
+            </ul>
+
+
+        </section>
+
+        <section id="inhalt8" class="card">
+        <h1>Eingabegeräte</h1>
+            <ul>
+             <li>
+            <strong>Tastatur:</strong> Zeile wird mit Spalte elektrisch verbunden —> Verbindungen wertet ein Mikrocontroller aus.
+             </li>
+              <li>
+            <strong>Maus:</strong> Bewegungsinformation wird auf Rechner übertragen —> über Betriebssystem wird die Markierung auf dem Bildschirm bewegt.
+                 </li>
+                 <li>
+            <strong>Touchpad:</strong> Berührungsempfindliche Oberfläche —> Controller misst Signale und gibt sie an das Betriebssystem weiter —> BS übersetzt das in Mausbewegung —> überträgt auf Bildschirm.
+                 </li>
+                <li>
+            <strong>Scanner:</strong> Bild wird beleuchtet —> reflektiertes Licht wird über Spiegel auf lichtempfindliche Technologie geleitet —> in elektronische Daten umgewandelt.
+                </li>
+            </ul>
+        </section>
+
+<section id="inhalt9" class="card">
+        <h1>Ausgabegeräte</h1>
+    <section>
+        <h2>Drucker</h2>
+        <ul>
+            <li>Bildtrommel ist elektrisch geladen.</li>
+            <li>Jede Stelle, an der ein Bildpunkt entstehen soll, wird mit Laser beschossen.</li>
+            <li>An den Stellen wird die Bildtrommel entladen.</li>
+            <li>Bildtrommel wird mit Farbpulver beschichtet.</li>
+            <li>Farbpulver haftet nur an ungeladenen Stellen der Trommel.</li>
+            <li>Trommel wird erhitzt und Pulver bleibt am Papier haften.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Monitor</h2>
+        <ul>
+            <li>LCD-Zellen erzeugen elektrische Impulse für unterschiedliche Lichtmengen.</li>
+            <li>Vor der Zelle befindet sich ein Farbfilter.</li>
+            <li>3 Zellen mit Rot-, Grün- und Blau-Filter bilden 1 Pixel.</li>
+        </ul>
+    </section>
+</section>
+
+<section id="inhalt10" class="card">
+    <h1>Speichermedien</h1>
+    <section>
+        <h2>Optische Speicher</h2>
+        <ul>
+            <li>Träger mit 0 und 1.</li>
+            <li>Laser tastet optische Speichermedien ab.</li>
+            <li>Starker Laser kratzt die oberste Schicht ab.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Magnetische Speicher</h2>
+        <ul>
+            <li>Schreiblesekopf tastet und ordnet Magnete.</li>
+            <li>Magnetträger wird in 0 und 1 interpretiert.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Elektronische Speicher</h2>
+        <ul>
+            <li>Transistoren in einem Zustand.</li>
+            <li>Laden der Transistoren oder Entladen (Löschen).</li>
+        </ul>
+    </section>
+</section>
+
+<section id="inhalt11" class="card">
+    <h1>Kommunikation</h1>
+    <section>
+        <h2>Topologien</h2>
+        <ul>
+            <li>Stern</li>
+            <li>Baum</li>
+            <li>Kreis</li>
+            <li>BUS</li>
+            <li>Vermaschte</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Bussystem</h2>
+        <ul>
+            <li>Alle Hosts sind über eine Leitung miteinander verbunden.</li>
+            <li>Alle Hosts haben Zugriff auf das Übertragungsmedium (BUS).</li>
+            <li>Kabelende mit Abschlusswiderstand.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Ring</h2>
+        <ul>
+            <li>Geschlossene Kabelstrecke —> alle Teilnehmer sind mit durchgehendem Kabel verbunden.</li>
+            <li>Der Zugriff auf das Übertragungsmedium wird durch ein Protokoll geregelt.</li>
+            <li>Daten werden von Teilnehmer zu Teilnehmer übertragen, bis der Empfänger erreicht ist.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Stern</h2>
+        <ul>
+            <li>Alle Hosts sind mit einer Netzwerkkomponente verbunden.</li>
+            <li>Hosts haben eine Leitung zur Netzwerkkomponente.</li>
+            <li>Netzwerkkomponente verteilt Datenpakete an die Hosts.</li>
+        </ul>
+    </section>
         
+    <section>
+        <h2>Baum</h2>
+        <ul>
+            <li>Zentraler Knoten —> Teilnehmer verzweigen sich, mehrere Stern-Topologien.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Vermaschte Topologie</h2>
+        <ul>
+            <li>Alle Netzwerkknoten sind irgendwie miteinander verbunden.</li>
+            <li>Hosts sind mit ein oder mehreren anderen Hosts verbunden.</li>
+            <li>Vollvermascht —> jeder Rechner ist mit jedem anderen verbunden.</li>
+        </ul>
+    </section>
+</section>
+
+<section id="inhalt12" class="card">
+    <section>
+        <h2>Rechnernetz</h2>
+        <ul>
+            <li>Man spricht von einem Rechnernetz, wenn Endgeräte mit einer Topologie miteinander verbunden sind und ein Nutzen dabei entsteht.</li>
+            <li>Gemeinsames Nutzen von Peripheriegeräten.</li>
+            <li>Gemeinsame Administration.</li>
+        </ul>
+    </section>
+</section>
+
+<section id="inhalt13" class="card">
+    <h1>Adressierung im Netzwerk</h1>
+
+    <section>
+        <h2>MAC-Adressen</h2>
+        <ul>
+            <li>MAC-Adressen sind auf der Netzwerkkarte festgelegt.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>IP-Adressen</h2>
+        <ul>
+            <li>IPv4 und IPv6 sind die beiden Versionen von IP-Adressen.</li>
+            <li>CIDR (Classless Inter-Domain Routing) ist ein Verfahren zur Nutzung des 32-Bit IP-Adressraums für IPv4.</li>
+            <li>CIDR-Notation steht für eine IP-Adresse und ein Suffix, z.B. 255.255.255.0 = 255.255.255.0/24.</li>
+            <li>Binärdarstellung: 255.255.255.0 = 11111111.11111111.11111111.00000000.</li>
+            <li>Base IP: 255.255.255.0/24, Subnetzmaske.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>OSI-Modell</h2>
+        <ul>
+            <li><strong>7. Anwendungsschicht:</strong> Bereitstellung von Funktionen für Anwendungen.</li>
+            <li><strong>6. Darstellungsschicht:</strong> Datenumwandlung.</li>
+            <li><strong>5. Sitzungsschicht:</strong> Kommunikation zwischen Anwendungen wird synchronisiert.</li>
+            <li><strong>4. Transportschicht:</strong> Verbindung von System zu System.</li>
+            <li><strong>3. Vermittlungsschicht:</strong> Weiterleitung von Datenpaketen (kürzester Weg).</li>
+            <li><strong>2. Sicherungsschicht:</strong> Zuverlässige Datenübertragung, Fehlererkennung.</li>
+            <li><strong>1. Bitübertragungsschicht:</strong> Übertragung roher Datenbits.</li>
+        </ul>
+    </section>
+
+
+
+</section>
+
+
+
+
+
+
     </main>
 
     <footer>
