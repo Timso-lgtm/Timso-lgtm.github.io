@@ -45,9 +45,9 @@ const questions = [
   },{
     question: "Welche der folgenden ist eine typische Schleifenart in Algorithmen?",
     answers: [
-      { text: "for und while*", correct: true },
+      { text: "for und while", correct: true },
       { text: "true und false", correct: false },
-      { text: "true u", correct: false },
+      { text: "true und false", correct: false },
       { text: "start und stop", correct: false },
     ],
   },{
@@ -72,8 +72,8 @@ const questions = [
     answers: [
       { text: "while(x > 5)", correct: false },
       { text: "System.out.println(Hello)", correct: true },
-      { text: "for (i=0; i<10; i++) ", correct: false },
-      { text: "if(x==y) ", correct: false },
+      { text: "for (i=0; i<10; i++)", correct: false },
+      { text: "if(x==y)", correct: false },
     ],
   },{
     question: "Was geschieht während der „Verarbeitung“ eines Algorithmus?",
