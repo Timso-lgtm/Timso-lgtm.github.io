@@ -28,10 +28,10 @@ const questions = [
   },{
     question: "Wofür wird die logische Programmierung typischerweise verwendet?",
     answers: [
-      { text: "Komplexe mathematische Berechnungen", correct: true },
-      { text: "Modellierung und Lösung von logischen Problemen", correct: false },
+      { text: "Komplexe mathematische Berechnungen", correct: false },
+      { text: "Modellierung und Lösung von logischen Problemen", correct: true },
       { text: "Verarbeitung großer Datenmengen", correct: false },
-      { text: "Grafikdesign", correct: true },
+      { text: "Grafikdesign", correct: false },
 
     ],
   },{
@@ -45,8 +45,8 @@ const questions = [
   },{
     question: "Welche Aussage beschreibt einen Fakt in Prolog am besten? ",
     answers: [
-      { text: "Eine grundlegende Einheit der Information, die immer wahr ist", correct: false },
-      { text: "Eine Beziehung zwischen mehreren Variablen", correct: true },
+      { text: "Eine grundlegende Einheit der Information, die immer wahr ist", correct: true },
+      { text: "Eine Beziehung zwischen mehreren Variablen", correct: false },
       { text: "Ein Ergebnis einer Berechnung", correct: false },
       { text: " Eine Variable, die sich ändert", correct: false },
     ],
