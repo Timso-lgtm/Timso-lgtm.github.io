@@ -33,15 +33,6 @@ const questions = [
       { text: "Verarbeitung großer Datenmengen", correct: false },
       { text: "Grafikdesign", correct: true },
 
-      
-    ],
-  },{
-    question: "Welcher Vorteil gehört NICHT zu Datenbanken?",
-    answers: [
-      { text: "Dynamisches Wachstum der Zeilenanzahl", correct: false },
-      { text: "Zugriffskontrolle durch Login", correct: false },
-      { text: "Eingeschränkte Anzahl an Datensätzen", correct: true },
-      
     ],
   },{
     question: "Was versteht man unter einer „Regel“ in Prolog?",
@@ -100,13 +91,6 @@ const questions = [
       { text: "Erstellung visueller Inhalte", correct: false },
       { text: "Datenkompression", correct: false },
       
-    ],
-  },{
-    question: "Welche Methode wird bei der Datenanalyse verwendet, um Entitäten zu identifizieren? ",
-    answers: [
-      { text: "Zufallsanalyse", correct: false },
-      { text: " Nominalextraktion", correct: true },
-      { text: "Tabellenkopie ", correct: false },
     ],
   },
 ];
