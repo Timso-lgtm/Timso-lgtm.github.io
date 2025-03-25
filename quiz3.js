@@ -1,4 +1,4 @@
-const questionContainer = document.getElementById("question-container1");
+const questionContainer = document.getElementById("question-container");
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
@@ -9,107 +9,91 @@ const zurückButton = document.getElementById("zurück-btn")
 let shuffledQuestions, currentQuestionIndex, score;
 
 const questions = [
-    {
-        question: "Welche Architektur ermöglicht paralleles Arbeiten mittels Threads? ",
-        answers: [
-          { text: "Von-Neumann-Architektur ", correct: false},
-          { text: "Havard-Architektur", correct: false },
-          { text: "Datenfluss-Architektur", correct: true },
-          
-        ],
-      },
-      {
-        question: "Welche Architektur kombiniert Speicher und BUS? ",
-        answers: [
-          { text: "Von-Neumann-Architektur", correct: true },
-          { text: "Datenfluss-Architektur", correct: false },
-          { text: "Havard-Architektur", correct: false },
-          
-        ],
-      },
-      {
-        question: "Wie überträgt ein Touchpad Bewegungen an das Betriebssystem?",
-        answers: [
-          { text: "Über Lichtimpulse ", correct: false },
-          { text: "Über Signalmessung durch den Controller", correct: true },
-          { text: "Über elektrostatische Sensoren ", correct: false },
-        ],
-      },
-      {
-        question: "Wie funktioniert die Bilddarstellung bei LCD-Monitoren?",
-        answers: [
-          { text: "Durch magnetische Felder ", correct: false },
-          { text: "Durch Laserstrahlen", correct: false },
-          { text: "Durch elektrische Impulse mit Farbfiltern", correct: true },
-          
-        ],
-      },
-      {
-        question: "Wie werden Daten bei optischen Speichern gespeichert? ",
-        answers: [
-          { text: "Durch magnetische Felder ", correct: false },
-          { text: "Durch Laser, der 0 und 1 abtastet", correct: true },
-          { text: "Durch elektrische Ladung ", correct: false },
-        ],
-      },
-      {
-        question: "Welche Topologie verbindet alle Hosts über eine einzige Leitung?",
-        answers: [
-          { text: "BUS", correct: true },
-          { text: "Ring ", correct: false },
-          { text: "Stern ", correct: false },
-        ],
-      },
-      {
-        question: "Welche Topologie beschreibt alle Netzwerkknoten sind irgendwie miteinander verbunden? ",
-        answers: [
-          { text: "Stern ", correct: false },
-          { text: "BUS ", correct: false },
-          { text: "Vermaschte Topologie", correct: true },
-        ],
-      },
-      {
-        question: "Welche Adressierungsmethode basiert auf der Netzwerkkarte? ",
-        answers: [
-          { text: "IPv6 ", correct: falls },
-          { text: "MAC-Adressen", correct: true },
-          { text: " CIDR ", correct: false },
-        ],
-      },
-      {
-        question: "Wofür steht die Zahl /24 in der CIDR-Notation?",
-        answers: [
-          { text: "Anzahl der Hosts im Subnetz", correct: false },
-          { text: " Subnetzmaske", correct: true },
-          { text: "Übertragungsgeschwindigkeit ", correct: false },
-          
-        ],
-      },
-      {
-        question: "Welche Schicht des OSI-Modells ist für die Datenumwandlung verantwortlich? ",
-        answers: [
-          { text: "Transportschicht ", correct: false },
-          { text: "Sitzungsschicht", correct: false },
-          { text: "Darstellungsschicht", correct: true },
-        ],
-      },
-      {
-        question: "Welcher Nutzen ergibt sich aus der Verbindung von Endgeräten in einem Rechnernetz? ",
-        answers: [
-          { text: "Bessere Stromversorgung", correct: false },
-          { text: "Schnellere Taktung der CPUs", correct: false },
-          { text: "Gemeinsames Nutzen von Peripheriegeräten", correct: true },
-        ],
-      },
-      {
-        question: "Welche Schicht des OSI-Modells stellt die physische Übertragung roher Datenbits sicher?",
-        answers: [
-          { text: "Bitübertragungsschicht", correct: true },
-          { text: "Sicherungsschicht ", correct: false },
-          { text: "Anwendungsschicht ", correct: false },
-        ],
-      },
-  ];
+  {
+    question: "Was ist ein Algorithmus?",
+    answers: [
+      { text: "Eine Folge von wahllosen Anweisungen", correct: false },
+      { text: "Ein Rezept, um immer unterschiedliche Probleme zu lösen", correct: false},
+      { text: "Eine Verarbeitungsvorschrift, die Eingangsgrößen in Ausgangsgrößen umwandelt", correct: true },
+      { text: "Ein nicht definierter Prozess", correct: false },
+    ],
+  },{
+    question: "Welche Eigenschaft gehört NICHT zu einem Algorithmus?",
+    answers: [
+      { text: "Ausführbarkeit", correct: false },
+      { text: "Determinismus ", correct: false },
+      { text: "Endlichkeit", correct: false },
+      { text: "Zufälligkeit", correct: true },
+      
+    ],
+  },{
+    question: "Was bedeutet Determinismus in Bezug auf einen Algorithmus?",
+    answers: [
+      { text: "Die Reihenfolge der Schritte ist zufällig", correct: false },
+      { text: "Der Algorithmus ist endlos ", correct: false },
+      { text: "Die Reihenfolge ist eindeutig festgelegt", correct: true },
+      { text: "Es gibt keine Reihenfolge", correct: false },
+    ],
+  },{
+    question: "Welches ist KEIN Bestandteil eines Algorithmus?",
+    answers: [
+      { text: "Eingabe", correct: false },
+      { text: "Ausgabe ", correct: false },
+      { text: "Datenverlust", correct: true },
+      { text: "Verarbeitung ", correct: false },
+    ],
+  },{
+    question: "Welche der folgenden ist eine typische Schleifenart in Algorithmen?",
+    answers: [
+      { text: "for und while*", correct: true },
+      { text: "true und false", correct: false },
+      { text: "true u", correct: false },
+      { text: "start und stop", correct: false },
+    ],
+  },{
+    question: "Warum ist die Terminierung wichtig?",
+    answers: [
+      { text: "Damit ein Algorithmus für immer weiterläuft", correct: false },
+      { text: "Um sicherzustellen, dass ein Ergebnis erreicht wird", correct: true },
+      { text: "Um die Reihenfolge festzulegen", correct: false },
+      { text: "Damit der Algorithmus unendlich Daten verarbeiten kann ", correct: false },
+    ],
+  },{
+    question: "Was bedeutet „Ausführbarkeit“ in Bezug auf Algorithmen?",
+    answers: [
+      { text: "Jeder Schritt kann vom Prozessor durchgeführt werden", correct: true },
+      { text: "Nur die ersten Schritte müssen machbar sein", correct: false },
+      { text: "Der Algorithmus kann endlos laufen", correct: false },
+      { text: "Ausführbarkeit ist nicht notwendig", correct: false },
+     
+    ],
+  },{
+    question: "Welches ist ein Beispiel für eine einfache Anweisung in einem Algorithmus?",
+    answers: [
+      { text: "while(x > 5)", correct: false },
+      { text: "System.out.println(Hello)", correct: true },
+      { text: "for (i=0; i<10; i++) ", correct: false },
+      { text: "if(x==y) ", correct: false },
+    ],
+  },{
+    question: "Was geschieht während der „Verarbeitung“ eines Algorithmus?",
+    answers: [
+      { text: "Daten werden ignoriert", correct: false },
+      { text: "Daten werden nach Regeln verarbeitet", correct: true },
+      { text: "Daten werden ausgegeben, ohne sie zu ändern", correct: false },
+      { text: "Daten gehen verloren", correct: false },
+    ],
+  },{
+    question: "Welche Bedeutung hat die „Ausgabe“ in einem Algorithmus?",
+    answers: [
+      { text: "Es gibt keine Bedeutung", correct: false },
+      { text: "Sie liefert das Ergebnis der Verarbeitung", correct: true },
+      { text: "Sie startet den Algorithmus ", correct: false },
+      { text: "Sie ist Teil der Eingabe", correct: false },
+    ],
+  },
+];
+
 startQuiz();
 
 function startQuiz() {
@@ -124,56 +108,56 @@ function startQuiz() {
 }
 
 function setNextQuestion() {
-    resetState();
-    showQuestion(shuffledQuestions[currentQuestionIndex]);
-  }
-  
+  resetState();
+  showQuestion(shuffledQuestions[currentQuestionIndex]);
+}
+
 function showQuestion(question) {
-    questionElement.innerText = question.question;
-    question.answers.forEach((answer, index) => {
-      const inputGroup = document.createElement("div");
-      inputGroup.classList.add("input-group");
-  
-      const radio = document.createElement("input");
-      radio.type = "radio";
-      radio.id = "answer" + index;
-      radio.name = "answer";
-      radio.value = index;
-  
-      const label = document.createElement("label");
-      label.htmlFor = "answer" + index;
-      label.innerText = answer.text;
-  
-      inputGroup.appendChild(radio);
-      inputGroup.appendChild(label);
-      answerButtons.appendChild(inputGroup);
-    });
-  }
+  questionElement.innerText = question.question;
+  question.answers.forEach((answer, index) => {
+    const inputGroup = document.createElement("div");
+    inputGroup.classList.add("input-group");
 
-  function resetState() {
-    while (answerButtons.firstChild) {
-      answerButtons.removeChild(answerButtons.firstChild);
-    }
-  }
+    const radio = document.createElement("input");
+    radio.type = "radio";
+    radio.id = "answer" + index;
+    radio.name = "answer";
+    radio.value = index;
 
-  nextButton.addEventListener("click", () => {
-    const answerIndex = Array.from(
-      answerButtons.querySelectorAll("input")
-    ).findIndex((radio) => radio.checked);
-    if (answerIndex !== -1) {
-      if (shuffledQuestions[currentQuestionIndex].answers[answerIndex].correct) {
-        score++;
-      }
-      currentQuestionIndex++;
-      if (shuffledQuestions.length > currentQuestionIndex) {
-        setNextQuestion();
-      } else {
-        endQuiz();
-      }
-    } else {
-      alert("Please select an answer.");
-    }
+    const label = document.createElement("label");
+    label.htmlFor = "answer" + index;
+    label.innerText = answer.text;
+
+    inputGroup.appendChild(radio);
+    inputGroup.appendChild(label);
+    answerButtons.appendChild(inputGroup);
   });
+}
+
+function resetState() {
+  while (answerButtons.firstChild) {
+    answerButtons.removeChild(answerButtons.firstChild);
+  }
+}
+
+nextButton.addEventListener("click", () => {
+  const answerIndex = Array.from(
+    answerButtons.querySelectorAll("input")
+  ).findIndex((radio) => radio.checked);
+  if (answerIndex !== -1) {
+    if (shuffledQuestions[currentQuestionIndex].answers[answerIndex].correct) {
+      score++;
+    }
+    currentQuestionIndex++;
+    if (shuffledQuestions.length > currentQuestionIndex) {
+      setNextQuestion();
+    } else {
+      endQuiz();
+    }
+  } else {
+    alert("Please select an answer.");
+  }
+});
 
 restartButton.addEventListener("click", startQuiz);
 
@@ -183,6 +167,7 @@ function endQuiz() {
   restartButton.classList.remove("hide");
   resultDiv.classList.remove("hide");
   resultDiv.innerText = `Your final score: ${score} / ${shuffledQuestions.length}`;
+  show
 }
 
 document.getElementById('backButton').addEventListener('click', function() {

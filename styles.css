@@ -54,6 +54,7 @@ header {
     color: rgb(255, 255, 255);
     padding: 20px 0;
     box-shadow: var(--shadow);
+
 }
 
 
@@ -72,6 +73,7 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     padding: 30px;
+    
 }
 
 nav ul li a:hover {
